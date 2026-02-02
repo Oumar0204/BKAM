@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BKAM Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f5f7;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #ffffff;
+            text-align: center;
+            padding: 70px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            max-width: 380px;
+            width: 90%;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            color: #8b0f3a;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .box {
+            background: white;
+            padding: 35px;
+            border-radius: 8px;
+            margin-bottom: 35px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="bkam.jpeg" alt="BKAM Services" class="logo">
+    <p>Expertise. Answers. Results.</p>
+</header>
+
+<section>
+    <div class="contact-wrapper">
+
+        <!-- INFOS -->
+        <div class="contact-info">
+            <h2>Pour toute demande d’information ou de collaboration,
+            vous pouvez nous contacter via les coordonnées ci-dessous :</h2>
+
+            <div class="info-block">
+                <strong>📍 Adresse</strong>
+                5 Rue François Jacob, 92500 Rueil-Malmaison
+            </div>
+
+            <div class="info-block">
+                <strong>📞 Téléphones</strong>
+                <a href="tel:0678818747">06 78 81 87 47</a>
+            </div>
+
+            <div class="info-block">
+                <strong>✉️ Emails</strong>
+                <a href="mailto:contact@upgrade-facilities.com">contact@upgrade-facilities.com</a>
+            </div>
+
+            <div class="contact-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991434516175!2d2.178903815674307!3d48.87999837929043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e672d6b3c9b5ff%3A0x4e4eb8e15db4e2cf!2s7%20Rue%20Henri%20Becquerel%2C%2092500%20Rueil-Malmaison%2C%20France!5e0!3m2!1sfr!2sus!4v1706496000000!5m2!1sfr!2sus"
+                    width="100%" height="100%" style="border:0;" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form">
+            <form action="https://formspree.io/f/xbdyradq" method="POST">
+                <label>Prénom</label>
+                <input type="text" name="prenom">
+
+                <label>Nom</label>
+                <input type="text" name="nom">
+
+                <label>Email *</label>
+                <input type="email" name="email" required>
+
+                <label>Message</label>
+                <textarea name="message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © BKAM Services – Expertise. Answers. Results.
+</footer>
+
+</body>
+</html>
