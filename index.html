@@ -14,19 +14,139 @@
             line-height: 1.7;
         }
 
+        /* NAVBAR */
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo a {
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            color: #8b0f3a;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #222;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #8b0f3a;
+        }
+
+        .more {
+            position: relative;
+        }
+
+        .more-btn {
+            background: none;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            list-style: none;
+            padding: 10px 0;
+            min-width: 160px;
+        }
+
+        .dropdown li {
+            padding: 10px 20px;
+        }
+
+        .dropdown li a {
+            color: #222;
+        }
+
+        .more:hover .dropdown {
+            display: block;
+        }
+
+        .burger {
+            display: none;
+            font-size: 26px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                border-top: 1px solid #ddd;
+            }
+
+            .nav-links li {
+                padding: 15px;
+                border-bottom: 1px solid #eee;
+                text-align: center;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .more:hover .dropdown {
+                display: none;
+            }
+
+            .dropdown {
+                position: static;
+                box-shadow: none;
+            }
+        }
+
         header {
             background: linear-gradient(135deg, #ffffff, #f0f0f0);
             text-align: center;
-            padding: 80px 20px;
+            padding: 90px 20px;
             border-bottom: 1px solid #ddd;
         }
 
         .logo {
-			max-width: 220px;
-			width: 100%;
-			margin-bottom: 20px;
-		}
-
+            max-width: 220px;
+            margin-bottom: 20px;
+        }
 
         header p {
             font-size: 18px;
@@ -47,160 +167,40 @@
         }
 
         .box {
-            background: white;
+            background: #fff;
             padding: 40px;
             border-radius: 10px;
             margin-bottom: 40px;
             box-shadow: 0 8px 22px rgba(0,0,0,0.08);
         }
 
-        ul {
-            padding-left: 20px;
+        .cta {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #8b0f3a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
         }
 
-        ul li {
-            margin-bottom: 8px;
+        .cta:hover {
+            opacity: 0.9;
         }
 
         footer {
             background: #111;
-            color: white;
+            color: #fff;
             text-align: center;
             padding: 35px 15px;
             font-size: 14px;
         }
-		
-		/* NAVBAR */
-.navbar {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-logo a {
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
-    color: #8b0f3a;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #222;
-    font-weight: 600;
-}
-
-.nav-links a:hover {
-    color: #8b0f3a;
-}
-
-/* DROPDOWN */
-.more {
-    position: relative;
-}
-
-.more-btn {
-    background: none;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 30px;
-    right: 0;
-    background: #fff;
-    border-radius: 6px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    list-style: none;
-    padding: 10px 0;
-    min-width: 160px;
-}
-
-.dropdown li {
-    padding: 10px 20px;
-}
-
-.dropdown li a {
-    color: #222;
-}
-
-.more:hover .dropdown {
-    display: block;
-}
-
-/* BURGER */
-.burger {
-    display: none;
-    font-size: 26px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 65px;
-        left: 0;
-        right: 0;
-        background: #fff;
-        flex-direction: column;
-        gap: 0;
-        border-top: 1px solid #ddd;
-    }
-
-    .nav-links li {
-        padding: 15px;
-        border-bottom: 1px solid #eee;
-        width: 100%;
-        text-align: center;
-    }
-
-    .more:hover .dropdown {
-        display: none;
-    }
-
-    .dropdown {
-        position: static;
-        box-shadow: none;
-    }
-
-    .burger {
-        display: block;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
-
     </style>
 </head>
 
 <body>
+
 <nav class="navbar">
     <div class="nav-container">
         <div class="nav-logo">
@@ -241,9 +241,8 @@
             de systèmes d’information et de cybersécurité.
         </p>
         <p>
-            L’entreprise intervient en appui des directions métiers et techniques,
-            avec une approche pragmatique centrée sur les besoins réels des clients
-            et la fiabilité des solutions mises en œuvre.
+            L’entreprise intervient auprès des directions métiers et techniques
+            avec une approche pragmatique, orientée usage réel et efficacité durable.
         </p>
     </div>
 
@@ -251,125 +250,57 @@
         <h2>Positionnement</h2>
         <p>
             BKAM Services se positionne comme un partenaire de conseil et de services,
-            capable d’intervenir ponctuellement ou dans la durée,
-            en fonction des enjeux et des contraintes de chaque organisation.
-        </p>
-        <p>
-            Les interventions sont adaptées au contexte du client,
-            qu’il s’agisse d’optimisation de processus,
-            d’accompagnement technologique ou de renforcement de la sécurité.
+            capable d’intervenir de manière ciblée ou sur le long terme,
+            en fonction des enjeux et contraintes de chaque organisation.
         </p>
     </div>
 
     <div class="box">
-        <h2>Domaines d’expertise</h2>
+        <h2>Nos expertises clés</h2>
+        <p>
+            BKAM Services accompagne ses clients sur l’ensemble de la chaîne
+            de valeur des systèmes d’information et des services numériques.
+        </p>
+        <a href="expertise.html" class="cta">Découvrir nos expertises</a>
+    </div>
+
+    <div class="box">
+        <h2>Cybersécurité & résilience</h2>
+        <p>
+            La cybersécurité constitue un axe stratégique majeur des prestations
+            proposées par BKAM Services, avec un focus sur la protection des données,
+            la gestion des risques et la continuité d’activité.
+        </p>
+        <a href="cybersecurite.html" class="cta">En savoir plus</a>
+    </div>
+
+    <div class="box">
+        <h2>Valeur ajoutée</h2>
         <ul>
-            <li><strong>Infrastructure & Gestion des données :</strong> Créer des avantages concurrentiels grâce à la gestion intelligente des services informatiques.</li>
-            <li><strong>Solutions Entreprises & Plateformes :</strong> Transformer les visions stratégiques en technologie, en combinant solutions innovantes et
-solutions éprouvées.</li>
-            <li><strong>Big Data & Cybersécurité :</strong> Gagner en compétitivité grâce au Big Data et la sécurité des données.</li>
-            <li><strong>E-paiements & E-transactions :</strong> Via Worldline, disposer d’une expertise inégalée dans les paiements et services numériques.</li>
-			<li><strong>Logiciels & plateformes de communication :</strong> Via Unify, combiner voix, données et vidéos et bénéficier d’une solution collaborative unique.</li>
+            <li>Approche pragmatique orientée résultats</li>
+            <li>Expertise technique et fonctionnelle combinée</li>
+            <li>Solutions adaptées aux contraintes métiers</li>
+            <li>Accompagnement durable et structuré</li>
         </ul>
     </div>
 
     <div class="box">
-        <h2>Approche</h2>
+        <h2>Engagements</h2>
         <p>
-            BKAM Services privilégie une approche claire et structurée,
-            basée sur l’écoute, l’analyse et la compréhension des besoins métiers.
-        </p>
-        <p>
-            Les solutions proposées visent à être opérationnelles,
-            adaptées aux contraintes existantes
-            et alignées avec les objectifs de l’organisation.
+            BKAM Services s’engage à fournir des prestations fondées
+            sur la transparence, la fiabilité et la sécurité,
+            en plaçant la confiance et la protection des données
+            au cœur de ses interventions.
         </p>
     </div>
 
     <div class="box">
-        <h2>Cybersécurité</h2>
+        <h2>Vous accompagner</h2>
         <p>
-            La cybersécurité constitue un axe important des prestations proposées.
-            BKAM Services accompagne ses clients dans l’identification des risques
-            et la mise en place de mesures de protection adaptées.
+            Vous souhaitez échanger sur vos enjeux,
+            vos projets ou vos contraintes opérationnelles ?
         </p>
-        <ul>
-            <li>Analyse et sensibilisation aux risques numériques</li>
-            <li>Bonnes pratiques de sécurité des systèmes</li>
-            <li>Protection des données et des accès</li>
-            <li>Renforcement de la continuité d’activité</li>
-        </ul>
-    </div>
-
-    <div class="box">
-        <h2>Secteurs concernés</h2>
-        <ul>
-            <li>Secteur public et santé</li>
-            <li>Services financiers</li>
-			<li>Telecoms, Media et Utilities</li>
-            <li>Industrie, Distribution & Transport</li>
-        </ul>
-    </div>
-	
-	<div class="box">
-    <h2>Partenariats technologiques</h2>
-    <p>
-        BKAM Services s’appuie sur des partenariats stratégiques
-        afin de proposer à ses clients des solutions fiables,
-        performantes et reconnues sur le marché.
-    </p>
-    <ul>
-        <li><strong>Worldline :</strong> expertise dans les solutions de paiement,
-        les transactions électroniques et les services numériques sécurisés.</li>
-        <li><strong>Unify :</strong> solutions logicielles et plateformes de communication
-        intégrant voix, données et collaboration.</li>
-    </ul>
-</div>
-
-<div class="box">
-    <h2>Méthodologie d’intervention</h2>
-    <ul>
-        <li>Analyse des besoins et du contexte client</li>
-        <li>Définition d’une solution adaptée et réaliste</li>
-        <li>Mise en œuvre progressive et maîtrisée</li>
-        <li>Accompagnement, suivi et amélioration continue</li>
-    </ul>
-</div>
-
-<div class="box">
-    <h2>Valeur ajoutée</h2>
-    <ul>
-        <li>Approche pragmatique orientée résultats</li>
-        <li>Expertise technique et fonctionnelle combinée</li>
-        <li>Solutions adaptées aux contraintes métiers</li>
-        <li>Vision long terme et accompagnement durable</li>
-    </ul>
-</div>
-
-<div class="box">
-    <h2>Engagements</h2>
-    <p>
-        BKAM Services s’engage à fournir des prestations
-        reposant sur la transparence, la fiabilité
-        et la sécurité des solutions proposées.
-    </p>
-    <p>
-        L’entreprise place la confiance, la conformité
-        et la protection des données au cœur de ses interventions.
-    </p>
-</div>
-
-    <div class="box">
-        <h2>Contact</h2>
-        <p>
-            Pour toute demande d’information ou de prise de contact :
-        </p>
-        <p>
-            <strong>BKAM Services</strong><br>
-            Adresse : 5 Rue François Jacob, 92500 Rueil-Malmaison<br>
-            Téléphone : 06 78 81 87 47<br>
-            Email : contact@bkam-services.com
-        </p>
+        <a href="contact.html" class="cta">Nous contacter</a>
     </div>
 
 </section>
@@ -377,6 +308,7 @@ solutions éprouvées.</li>
 <footer>
     © BKAM Services – Expertise. Answers. Results.
 </footer>
+
 <script>
 function toggleMenu() {
     document.querySelector('.nav-links').classList.toggle('active');
