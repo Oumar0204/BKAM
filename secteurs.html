@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>BKAM Services</title>
+    <title>Secteurs d’intervention | BKAM Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -15,141 +15,66 @@
         }
 
         header {
-            background: #ffffff;
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
             text-align: center;
-            padding: 70px 20px;
+            padding: 80px 20px;
             border-bottom: 1px solid #ddd;
         }
 
         .logo {
-            max-width: 380px;
-            width: 90%;
+            max-width: 220px;
+            width: 100%;
             margin-bottom: 20px;
         }
 
         header p {
             font-size: 18px;
-            font-weight: bold;
-            color: #444;
+            font-weight: 600;
+            color: #555;
         }
 
         section {
             max-width: 1100px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 70px 20px;
         }
 
         h2 {
             color: #8b0f3a;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             font-size: 28px;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-top: 0;
+            color: #333;
         }
 
         .box {
             background: white;
-            padding: 35px;
-            border-radius: 8px;
-            margin-bottom: 35px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.08);
         }
 
         ul {
             padding-left: 20px;
         }
 
+        ul li {
+            margin-bottom: 8px;
+        }
+
         footer {
             background: #111;
             color: white;
             text-align: center;
-            padding: 30px 15px;
+            padding: 35px 15px;
             font-size: 14px;
         }
-		
-		.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.contact-info h2 {
-    font-size: 22px;
-    margin-bottom: 25px;
-    color: #8b0f3a;
-}
-
-.info-block {
-    margin-bottom: 20px;
-    font-size: 16px;
-}
-
-.info-block strong {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.info-block a {
-    color: #222;
-    text-decoration: none;
-}
-
-.contact-map {
-    margin-top: 25px;
-    width: 100%;
-    height: 260px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.contact-form {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 18px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.contact-form textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.contact-form button {
-    background: #8b0f3a;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.contact-form button:hover {
-    background: #6f0c2f;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* NAVBAR */
+		/* NAVBAR */
 .navbar {
     background: #fff;
     border-bottom: 1px solid #ddd;
@@ -307,60 +232,98 @@
 
 <header>
     <img src="bkam.jpeg" alt="BKAM Services" class="logo">
-    <p>Expertise. Answers. Results.</p>
+    <p>Secteurs d’intervention</p>
 </header>
 
 <section>
-    <div class="contact-wrapper">
 
-        <!-- INFOS -->
-        <div class="contact-info">
-            <h2>Pour toute demande d’information ou de collaboration,
-            vous pouvez nous contacter via les coordonnées ci-dessous :</h2>
-
-            <div class="info-block">
-                <strong>📍 Adresse</strong>
-                5 Rue François Jacob, 92500 Rueil-Malmaison
-            </div>
-
-            <div class="info-block">
-                <strong>📞 Téléphones</strong>
-                <a href="tel:0678818747">06 78 81 87 47</a>
-            </div>
-
-            <div class="info-block">
-                <strong>✉️ Emails</strong>
-                <a href="mailto:contact@upgrade-facilities.com">contact@upgrade-facilities.com</a>
-            </div>
-
-            <div class="contact-map">
-                <iframe 
-    src="https://www.google.com/maps?q=5+Rue+François+Jacob,+92500+Rueil-Malmaison&output=embed"
-    width="100%" height="100%" style="border:0;" loading="lazy">
-</iframe>
-
-            </div>
-        </div>
-
-        <!-- FORM -->
-        <div class="contact-form">
-            <form action="https://formspree.io/f/xbdyradq" method="POST">
-                <label>Prénom</label>
-                <input type="text" name="prenom">
-
-                <label>Nom</label>
-                <input type="text" name="nom">
-
-                <label>Email *</label>
-                <input type="email" name="email" required>
-
-                <label>Message</label>
-                <textarea name="message" required></textarea>
-
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
+    <div class="box">
+        <h2>Des interventions adaptées aux enjeux métiers</h2>
+        <p>
+            BKAM Services intervient auprès d’organisations
+            issues de différents secteurs,
+            en tenant compte des contraintes réglementaires,
+            opérationnelles et technologiques propres à chacun.
+        </p>
+        <p>
+            L’approche reste pragmatique et orientée résultats,
+            quel que soit le secteur d’activité.
+        </p>
     </div>
+
+    <div class="box">
+        <h3>Secteur public & Santé</h3>
+        <p>
+            Les organisations du secteur public et de la santé
+            font face à des enjeux forts en matière
+            de sécurité, de continuité de service
+            et de protection des données sensibles.
+        </p>
+        <ul>
+            <li>Systèmes d’information critiques</li>
+            <li>Sécurisation des données sensibles</li>
+            <li>Fiabilité et disponibilité des services</li>
+            <li>Accompagnement des projets de modernisation</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Services financiers</h3>
+        <p>
+            Le secteur financier exige des niveaux élevés
+            de sécurité, de conformité
+            et de maîtrise des flux de données et de paiements.
+        </p>
+        <ul>
+            <li>Solutions de paiement et e-transactions</li>
+            <li>Sécurisation des systèmes et des données</li>
+            <li>Gestion des risques numériques</li>
+            <li>Accompagnement technologique</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Telecoms, Media & Utilities</h3>
+        <p>
+            Ces secteurs reposent sur des infrastructures complexes
+            nécessitant performance, disponibilité
+            et sécurité des systèmes.
+        </p>
+        <ul>
+            <li>Infrastructures et plateformes de communication</li>
+            <li>Gestion des données et des flux</li>
+            <li>Continuité d’activité</li>
+            <li>Sécurisation des environnements numériques</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Industrie, Distribution & Transport</h3>
+        <p>
+            Les acteurs de l’industrie, de la distribution
+            et du transport doivent concilier
+            performance opérationnelle
+            et maîtrise des systèmes d’information.
+        </p>
+        <ul>
+            <li>Optimisation des processus</li>
+            <li>Fiabilité des systèmes informatiques</li>
+            <li>Sécurité des données et des accès</li>
+            <li>Accompagnement des transformations numériques</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Une approche transversale</h2>
+        <p>
+            Quel que soit le secteur,
+            BKAM Services adapte ses interventions
+            aux enjeux spécifiques de chaque organisation,
+            en tenant compte de son environnement,
+            de ses contraintes et de ses objectifs.
+        </p>
+    </div>
+
 </section>
 
 <footer>

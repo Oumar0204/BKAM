@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Expertises | BKAM Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f5f7;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            max-width: 220px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 18px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        h2 {
+            color: #8b0f3a;
+            margin-bottom: 18px;
+            font-size: 28px;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+            font-size: 14px;
+        }
+		/* NAVBAR */
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo a {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: #8b0f3a;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #8b0f3a;
+}
+
+/* DROPDOWN */
+.more {
+    position: relative;
+}
+
+.more-btn {
+    background: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 160px;
+}
+
+.dropdown li {
+    padding: 10px 20px;
+}
+
+.dropdown li a {
+    color: #222;
+}
+
+.more:hover .dropdown {
+    display: block;
+}
+
+/* BURGER */
+.burger {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        gap: 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .nav-links li {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        text-align: center;
+    }
+
+    .more:hover .dropdown {
+        display: none;
+    }
+
+    .dropdown {
+        position: static;
+        box-shadow: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html">BKAM</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="expertise.html">Expertises</a></li>
+            <li><a href="cybersecurite.html">Cybersécurité</a></li>
+
+            <li class="more">
+                <button class="more-btn">Plus ▾</button>
+                <ul class="dropdown">
+                    <li><a href="secteurs.html">Secteurs</a></li>
+                    <li><a href="partenariats.html">Partenariats</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <button class="burger" onclick="toggleMenu()">☰</button>
+    </div>
+</nav>
+
+<header>
+    <img src="bkam.jpeg" alt="BKAM Services" class="logo">
+    <p>Nos domaines d’expertise</p>
+</header>
+
+<section>
+
+    <div class="box">
+        <h2>Une expertise au service des enjeux métiers</h2>
+        <p>
+            BKAM Services accompagne les organisations dans la conception,
+            l’évolution et la sécurisation de leurs systèmes d’information,
+            en s’appuyant sur des expertises complémentaires et adaptées
+            aux réalités opérationnelles.
+        </p>
+        <p>
+            Les domaines d’intervention couvrent aussi bien
+            les infrastructures techniques que les plateformes métiers
+            et les enjeux de sécurité et de données.
+        </p>
+    </div>
+
+    <div class="box">
+        <h3>Infrastructure & gestion des données</h3>
+        <p>
+            BKAM Services accompagne ses clients dans l’organisation
+            et l’optimisation de leurs infrastructures informatiques
+            afin d’améliorer la fiabilité, la performance et la disponibilité des services.
+        </p>
+        <ul>
+            <li>Organisation et exploitation des infrastructures</li>
+            <li>Gestion et sécurisation des données</li>
+            <li>Amélioration de la performance des services IT</li>
+            <li>Accompagnement à l’évolution des environnements existants</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Solutions entreprises & plateformes</h3>
+        <p>
+            BKAM Services intervient dans la mise en œuvre
+            et l’évolution de solutions applicatives
+            répondant aux besoins métiers des organisations.
+        </p>
+        <ul>
+            <li>Intégration de solutions existantes</li>
+            <li>Évolution et modernisation des plateformes</li>
+            <li>Interopérabilité des systèmes</li>
+            <li>Accompagnement des utilisateurs et des équipes métiers</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Big Data & cybersécurité</h3>
+        <p>
+            L’exploitation des données et leur protection
+            constituent des enjeux majeurs pour les organisations.
+            BKAM Services accompagne ses clients dans la valorisation
+            et la sécurisation de leurs données.
+        </p>
+        <ul>
+            <li>Analyse et gestion des données</li>
+            <li>Protection des données sensibles</li>
+            <li>Gestion des risques liés aux systèmes d’information</li>
+            <li>Renforcement de la sécurité des environnements numériques</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>E-paiements & e-transactions</h3>
+        <p>
+            Grâce à ses partenariats technologiques,
+            BKAM Services accompagne les organisations
+            dans la mise en œuvre de solutions de paiement
+            et de transactions électroniques sécurisées.
+        </p>
+        <ul>
+            <li>Solutions de paiement et services numériques</li>
+            <li>Sécurisation des transactions électroniques</li>
+            <li>Intégration de solutions partenaires</li>
+            <li>Accompagnement des projets de dématérialisation</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Logiciels & plateformes de communication</h3>
+        <p>
+            BKAM Services propose des solutions de communication
+            permettant de combiner voix, données et collaboration
+            au sein d’environnements professionnels.
+        </p>
+        <ul>
+            <li>Solutions collaboratives et de communication unifiée</li>
+            <li>Intégration de plateformes voix, données et vidéo</li>
+            <li>Accompagnement au changement et à l’usage</li>
+            <li>Amélioration de la communication interne</li>
+        </ul>
+    </div>
+
+</section>
+
+<footer>
+    © BKAM Services – Expertise. Answers. Results.
+</footer>
+<script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

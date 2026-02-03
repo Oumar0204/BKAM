@@ -15,59 +15,216 @@
         }
 
         header {
-            background: #ffffff;
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
             text-align: center;
-            padding: 70px 20px;
+            padding: 80px 20px;
             border-bottom: 1px solid #ddd;
         }
 
         .logo {
-            max-width: 380px;
-            width: 90%;
-            margin-bottom: 20px;
-        }
+			max-width: 220px;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
 
         header p {
             font-size: 18px;
-            font-weight: bold;
-            color: #444;
+            font-weight: 600;
+            color: #555;
         }
 
         section {
             max-width: 1100px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 70px 20px;
         }
 
         h2 {
             color: #8b0f3a;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             font-size: 28px;
         }
 
         .box {
             background: white;
-            padding: 35px;
-            border-radius: 8px;
-            margin-bottom: 35px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.08);
         }
 
         ul {
             padding-left: 20px;
         }
 
+        ul li {
+            margin-bottom: 8px;
+        }
+
         footer {
             background: #111;
             color: white;
             text-align: center;
-            padding: 30px 15px;
+            padding: 35px 15px;
             font-size: 14px;
         }
+		
+		/* NAVBAR */
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo a {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: #8b0f3a;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #8b0f3a;
+}
+
+/* DROPDOWN */
+.more {
+    position: relative;
+}
+
+.more-btn {
+    background: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 160px;
+}
+
+.dropdown li {
+    padding: 10px 20px;
+}
+
+.dropdown li a {
+    color: #222;
+}
+
+.more:hover .dropdown {
+    display: block;
+}
+
+/* BURGER */
+.burger {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        gap: 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .nav-links li {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        text-align: center;
+    }
+
+    .more:hover .dropdown {
+        display: none;
+    }
+
+    .dropdown {
+        position: static;
+        box-shadow: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
     </style>
 </head>
 
 <body>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html">BKAM</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="expertise.html">Expertises</a></li>
+            <li><a href="cybersecurite.html">Cybersécurité</a></li>
+
+            <li class="more">
+                <button class="more-btn">Plus ▾</button>
+                <ul class="dropdown">
+                    <li><a href="secteurs.html">Secteurs</a></li>
+                    <li><a href="partenariats.html">Partenariats</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <button class="burger" onclick="toggleMenu()">☰</button>
+    </div>
+</nav>
 
 <header>
     <img src="bkam.jpeg" alt="BKAM Services" class="logo">
@@ -79,89 +236,139 @@
     <div class="box">
         <h2>Présentation</h2>
         <p>
-            BKAM Services est un acteur de référence dans l’accompagnement des organisations
-            publiques et privées face aux enjeux de transformation digitale, d’externalisation
-            des processus métiers et de sécurisation des systèmes d’information.
+            BKAM Services est une société de services spécialisée dans l’accompagnement
+            des organisations sur des problématiques de performance opérationnelle,
+            de systèmes d’information et de cybersécurité.
         </p>
         <p>
-            Notre mission est d’apporter des solutions opérationnelles, mesurables et durables,
-            en combinant expertise humaine, innovation technologique et excellence opérationnelle.
+            L’entreprise intervient en appui des directions métiers et techniques,
+            avec une approche pragmatique centrée sur les besoins réels des clients
+            et la fiabilité des solutions mises en œuvre.
         </p>
     </div>
 
     <div class="box">
-        <h2>Vision & positionnement</h2>
+        <h2>Positionnement</h2>
         <p>
-            BKAM Services se positionne comme un partenaire stratégique de long terme,
-            capable d’intervenir sur l’ensemble de la chaîne de valeur des systèmes d’information.
+            BKAM Services se positionne comme un partenaire de conseil et de services,
+            capable d’intervenir ponctuellement ou dans la durée,
+            en fonction des enjeux et des contraintes de chaque organisation.
         </p>
         <p>
-            Nous aidons nos clients à améliorer leur performance, maîtriser leurs risques
-            et renforcer leur souveraineté numérique dans un environnement technologique
-            en constante évolution.
+            Les interventions sont adaptées au contexte du client,
+            qu’il s’agisse d’optimisation de processus,
+            d’accompagnement technologique ou de renforcement de la sécurité.
         </p>
     </div>
 
     <div class="box">
         <h2>Domaines d’expertise</h2>
         <ul>
-            <li><strong>Business Process Services (BPS) :</strong> externalisation et optimisation des fonctions Finance, RH et métiers.</li>
-            <li><strong>Transformation IT :</strong> intégration de solutions, modernisation applicative, Cloud et interopérabilité.</li>
-            <li><strong>Infrastructure & services managés :</strong> supervision, disponibilité, continuité et performance.</li>
-            <li><strong>Cybersécurité :</strong> gouvernance, protection, détection et résilience des systèmes.</li>
+            <li><strong>Infrastructure & Gestion des données :</strong> Créer des avantages concurrentiels grâce à la gestion intelligente des services informatiques.</li>
+            <li><strong>Solutions Entreprises & Plateformes :</strong> Transformer les visions stratégiques en technologie, en combinant solutions innovantes et
+solutions éprouvées.</li>
+            <li><strong>Big Data & Cybersécurité :</strong> Gagner en compétitivité grâce au Big Data et la sécurité des données.</li>
+            <li><strong>E-paiements & E-transactions :</strong> Via Worldline, disposer d’une expertise inégalée dans les paiements et services numériques.</li>
+			<li><strong>Logiciels & plateformes de communication :</strong> Via Unify, combiner voix, données et vidéos et bénéficier d’une solution collaborative unique.</li>
         </ul>
     </div>
 
     <div class="box">
-        <h2>Gouvernance & expertise</h2>
+        <h2>Approche</h2>
         <p>
-            Les équipes BKAM Services sont composées de consultants, architectes,
-            ingénieurs et experts métiers disposant d’une solide expérience
-            dans des environnements critiques et réglementés.
+            BKAM Services privilégie une approche claire et structurée,
+            basée sur l’écoute, l’analyse et la compréhension des besoins métiers.
         </p>
         <p>
-            Notre approche repose sur la gouvernance des risques,
-            la conformité réglementaire et l’alignement constant
-            entre les objectifs métiers et technologiques.
+            Les solutions proposées visent à être opérationnelles,
+            adaptées aux contraintes existantes
+            et alignées avec les objectifs de l’organisation.
         </p>
     </div>
 
     <div class="box">
-        <h2>Cybersécurité et résilience</h2>
+        <h2>Cybersécurité</h2>
         <p>
-            La cybersécurité est un pilier stratégique de l’offre BKAM Services.
-            Nous accompagnons nos clients dans la protection de leurs données,
-            la sécurisation de leurs infrastructures et la continuité de leurs activités.
+            La cybersécurité constitue un axe important des prestations proposées.
+            BKAM Services accompagne ses clients dans l’identification des risques
+            et la mise en place de mesures de protection adaptées.
         </p>
         <ul>
-            <li>Audit et gestion des risques cyber</li>
-            <li>Protection des systèmes critiques</li>
-            <li>Conformité réglementaire et normes de sécurité</li>
-            <li>Renforcement de la résilience opérationnelle</li>
+            <li>Analyse et sensibilisation aux risques numériques</li>
+            <li>Bonnes pratiques de sécurité des systèmes</li>
+            <li>Protection des données et des accès</li>
+            <li>Renforcement de la continuité d’activité</li>
         </ul>
     </div>
 
     <div class="box">
-        <h2>Secteurs d’intervention</h2>
+        <h2>Secteurs concernés</h2>
         <ul>
-            <li>Secteur public, santé et institutions</li>
-            <li>Banque, finance et assurance</li>
-            <li>Industrie, transport et énergie</li>
-            <li>Télécommunications et services numériques</li>
+            <li>Secteur public et santé</li>
+            <li>Services financiers</li>
+			<li>Telecoms, Media et Utilities</li>
+            <li>Industrie, Distribution & Transport</li>
         </ul>
     </div>
+	
+	<div class="box">
+    <h2>Partenariats technologiques</h2>
+    <p>
+        BKAM Services s’appuie sur des partenariats stratégiques
+        afin de proposer à ses clients des solutions fiables,
+        performantes et reconnues sur le marché.
+    </p>
+    <ul>
+        <li><strong>Worldline :</strong> expertise dans les solutions de paiement,
+        les transactions électroniques et les services numériques sécurisés.</li>
+        <li><strong>Unify :</strong> solutions logicielles et plateformes de communication
+        intégrant voix, données et collaboration.</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Méthodologie d’intervention</h2>
+    <ul>
+        <li>Analyse des besoins et du contexte client</li>
+        <li>Définition d’une solution adaptée et réaliste</li>
+        <li>Mise en œuvre progressive et maîtrisée</li>
+        <li>Accompagnement, suivi et amélioration continue</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Valeur ajoutée</h2>
+    <ul>
+        <li>Approche pragmatique orientée résultats</li>
+        <li>Expertise technique et fonctionnelle combinée</li>
+        <li>Solutions adaptées aux contraintes métiers</li>
+        <li>Vision long terme et accompagnement durable</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Engagements</h2>
+    <p>
+        BKAM Services s’engage à fournir des prestations
+        reposant sur la transparence, la fiabilité
+        et la sécurité des solutions proposées.
+    </p>
+    <p>
+        L’entreprise place la confiance, la conformité
+        et la protection des données au cœur de ses interventions.
+    </p>
+</div>
 
     <div class="box">
         <h2>Contact</h2>
         <p>
-            Pour toute demande d’information ou de collaboration,
-            vous pouvez nous contacter via les coordonnées ci-dessous :
+            Pour toute demande d’information ou de prise de contact :
         </p>
         <p>
             <strong>BKAM Services</strong><br>
             Adresse : 5 Rue François Jacob, 92500 Rueil-Malmaison<br>
             Téléphone : 06 78 81 87 47<br>
-            Email : À compléter
+            Email : contact@bkam-services.com
         </p>
     </div>
 
@@ -170,6 +377,11 @@
 <footer>
     © BKAM Services – Expertise. Answers. Results.
 </footer>
+<script>
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
 
 </body>
 </html>
