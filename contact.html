@@ -259,13 +259,19 @@
     }
 
     .more:hover .dropdown {
-        display: none;
-    }
+    display: block;
+}
+
 
     .dropdown {
         position: static;
         box-shadow: none;
     }
+
+	.dropdown.show {
+    display: block;
+}
+
 
     .burger {
         display: block;
@@ -292,13 +298,14 @@
             <li><a href="cybersecurite.html">Cybersécurité</a></li>
 
             <li class="more">
-                <button class="more-btn">Plus ▾</button>
-                <ul class="dropdown">
-                    <li><a href="secteurs.html">Secteurs</a></li>
-                    <li><a href="partenariats.html">Partenariats</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </li>
+    <button class="more-btn" onclick="toggleDropdown()">Plus ▾</button>
+    <ul class="dropdown" id="dropdownMenu">
+        <li><a href="secteurs.html">Secteurs</a></li>
+        <li><a href="partenariats.html">Partenariats</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</li>
+
         </ul>
 
         <button class="burger" onclick="toggleMenu()">☰</button>
@@ -370,7 +377,12 @@
 function toggleMenu() {
     document.querySelector('.nav-links').classList.toggle('active');
 }
+
+function toggleDropdown() {
+    document.getElementById('dropdownMenu').classList.toggle('show');
+}
 </script>
 
 </body>
+
 </html>
