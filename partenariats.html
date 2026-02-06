@@ -169,7 +169,8 @@ footer {
 /* HERO IMAGE */
 .hero-image {
     width: 100%;
-    height: 320px;
+    min-height: 400px; /* plus agréable sur PC */
+    max-height: 600px;
     overflow: hidden;
 }
 
@@ -189,10 +190,8 @@ footer {
 
 .content-image img {
     width: 100%;
-    height: auto;
+    height: auto; /* garde les proportions naturelles */
     display: block;
-    max-height: 500px; /* optionnel selon design */
-    object-fit: cover;
 }
 
 /* MOBILE */
@@ -232,8 +231,13 @@ footer {
     .nav-links.active {
         display: flex;
     }
+
+    .hero-image {
+        min-height: 250px; /* hauteur réduite sur mobile */
+    }
 }
 </style>
+
 
 </head>
 
@@ -369,6 +373,7 @@ function toggleDropdown() {
 
 </body>
 </html>
+
 
 
 
