@@ -1,74 +1,87 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Cybersécurité | BKAM Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f5f7;
+    color: #222;
+    line-height: 1.7;
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f5f7;
-            color: #222;
-            line-height: 1.7;
-        }
+header {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 1px solid #ddd;
+}
 
-        header {
-            background: linear-gradient(135deg, #ffffff, #f0f0f0);
-            text-align: center;
-            padding: 80px 20px;
-            border-bottom: 1px solid #ddd;
-        }
+.logo {
+    max-width: 220px;
+    width: 100%;
+    margin-bottom: 20px;
+}
 
-        .logo {
-            max-width: 220px;
-            width: 100%;
-            margin-bottom: 20px;
-        }
+header p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+}
 
-        header p {
-            font-size: 18px;
-            font-weight: 600;
-            color: #555;
-        }
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 20px;
+}
 
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 70px 20px;
-        }
+h2 {
+    color: #8b0f3a;
+    margin-bottom: 18px;
+    font-size: 28px;
+}
 
-        h2 {
-            color: #8b0f3a;
-            margin-bottom: 18px;
-            font-size: 28px;
-        }
+.box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
 
-        .box {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            margin-bottom: 40px;
-            box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-        }
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    font-size: 14px;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+/* ===== IMAGES ===== */
 
-        ul li {
-            margin-bottom: 8px;
-        }
+.hero-image {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
 
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-            font-size: 14px;
-        }
-		/* NAVBAR */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-image {
+    margin: 40px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.content-image img {
+    width: 100%;
+    display: block;
+}
+
+/* ===== NAVBAR ===== */
+
 .navbar {
     background: #fff;
     border-bottom: 1px solid #ddd;
@@ -110,7 +123,8 @@
     color: #8b0f3a;
 }
 
-/* DROPDOWN */
+/* Dropdown */
+
 .more {
     position: relative;
 }
@@ -139,15 +153,12 @@
     padding: 10px 20px;
 }
 
-.dropdown li a {
-    color: #222;
-}
-
 .more:hover .dropdown {
     display: block;
 }
 
-/* BURGER */
+/* Burger */
+
 .burger {
     display: none;
     font-size: 26px;
@@ -156,74 +167,50 @@
     cursor: pointer;
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
+
 @media (max-width: 900px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 65px;
-        left: 0;
-        right: 0;
-        background: #fff;
-        flex-direction: column;
-        gap: 0;
-        border-top: 1px solid #ddd;
-    }
 
-    .nav-links li {
-        padding: 15px;
-        border-bottom: 1px solid #eee;
-        width: 100%;
-        text-align: center;
-    }
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    border-top: 1px solid #ddd;
+}
 
-    .more:hover .dropdown {
+.nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.dropdown {
+    position: static;
+    box-shadow: none;
+}
+
+.dropdown.show {
     display: block;
 }
 
-    .dropdown {
-        position: static;
-        box-shadow: none;
-    }
-
-	.dropdown.show {
+.burger {
     display: block;
 }
 
-
-    .burger {
-        display: block;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-	.hero-image {
-    width: 100%;
-    height: 320px;
-    overflow: hidden;
+.nav-links.active {
+    display: flex;
 }
 
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.hero-image {
+    height: 220px;
 }
 
-	.content-image {
-    margin: 25px 0;
-    border-radius: 10px;
-    overflow: hidden;
 }
-
-.content-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-}
-
-    </style>
+</style>
 </head>
 
 <body>
@@ -355,5 +342,6 @@ function toggleDropdown() {
 
 </body>
 </html>
+
 
 
