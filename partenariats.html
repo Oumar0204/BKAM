@@ -78,6 +78,34 @@ footer {
     font-size: 14px;
 }
 
+/* HERO IMAGE */
+.hero-image {
+    width: 100%;
+    min-height: 400px; /* plus agréable sur PC */
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTENT IMAGES */
+.content-image {
+    margin: 25px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content-image img {
+    width: 100%;
+    height: auto; /* conserve le ratio naturel */
+    display: block;
+}
+
 /* NAVBAR */
 .navbar {
     background: #fff;
@@ -166,34 +194,6 @@ footer {
     cursor: pointer;
 }
 
-/* HERO IMAGE */
-.hero-image {
-    width: 100%;
-    min-height: 400px; /* plus agréable sur PC */
-    max-height: 600px;
-    overflow: hidden;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* CONTENT IMAGES */
-.content-image {
-    margin: 25px 0;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.content-image img {
-    width: 100%;
-    height: auto; /* garde les proportions naturelles */
-    display: block;
-}
-
 /* MOBILE */
 @media (max-width: 900px) {
     .nav-links {
@@ -233,11 +233,10 @@ footer {
     }
 
     .hero-image {
-        min-height: 250px; /* hauteur réduite sur mobile */
+        min-height: 250px; /* réduit sur mobile */
     }
 }
 </style>
-
 
 </head>
 
@@ -373,6 +372,7 @@ function toggleDropdown() {
 
 </body>
 </html>
+
 
 
 
